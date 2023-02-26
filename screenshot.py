@@ -47,7 +47,7 @@ def on_mouse(event, x, y, flags, param):
         cv2.imwrite("{0}.jpg".format(i), cut_img)
 
 if __name__ == "__main__":
-    for i in range(1,101):
+    for i in range(1,2):
         cut()
         time.sleep(0.5)
 
