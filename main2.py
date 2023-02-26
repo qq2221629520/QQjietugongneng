@@ -9,6 +9,9 @@ import numpy as np
 from PIL import ImageGrab
 
 # 冻结画面并进行鼠标拖动截图
+from holoviews.examples.gallery.apps.bokeh.game_of_life import img
+
+
 def freeze_screenshot():
     # 对整个屏幕进行截图并保存到内存中
     image = ImageGrab.grab()
@@ -22,7 +25,7 @@ def freeze_screenshot():
     cv2.waitKey(0)
 
 # 鼠标回调函数
-def on_mouse(event, x, y, flags, param):
+def on_mouse(event, x, y, flags, param, img2=None):
     global point1, point2
     # 当鼠标左键按下时，记录鼠标按下的位置
     if event == cv2.EVENT_LBUTTONDOWN:
